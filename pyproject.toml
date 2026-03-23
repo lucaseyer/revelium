@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "revelium"
+version = "0.1.0"
+description = "An intelligent Selenium layer that reveals locator failures with structured local analysis."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Lucas Paixao" }
+]
+dependencies = [
+  "beautifulsoup4>=4.12.0",
+  "pydantic>=2.6.0",
+  "selenium>=4.18.0",
+  "typer>=0.12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+]
+
+[project.scripts]
+revelium = "revelium.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["revelium"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
