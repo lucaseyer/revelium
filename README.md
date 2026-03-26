@@ -1,4 +1,4 @@
-# 🔮 Revelium
+# 🔮 Revelium  >>> [WIP] <<<
 
 <p align="center">
   <img src="docs/revelium_art.png" alt="Revelium - reveal hidden UI structure" width="760">
